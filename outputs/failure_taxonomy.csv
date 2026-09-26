@@ -1,0 +1,5 @@
+failure_type,count
+False negative,2
+False positive,0
+Missing citation,1
+Correct claim,10

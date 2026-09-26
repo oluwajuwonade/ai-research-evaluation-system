@@ -1,0 +1,13 @@
+claim_id,workflow,expected,predicted,citation_present,latency_seconds,cost_usd
+1,standard,1,1,1,42,0.18
+2,standard,1,1,1,38,0.15
+3,standard,0,0,1,35,0.14
+4,standard,1,0,1,46,0.21
+5,fast,1,1,1,18,0.07
+6,fast,1,0,0,16,0.06
+7,fast,0,0,1,15,0.05
+8,fast,1,1,1,21,0.08
+9,reviewed,1,1,1,55,0.24
+10,reviewed,1,1,1,49,0.22
+11,reviewed,0,0,1,51,0.23
+12,reviewed,1,1,1,58,0.27

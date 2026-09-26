@@ -8,11 +8,20 @@ A strong-looking AI answer is not sufficient evidence that a research workflow i
 
 ## Analytical Questions
 
-- How accurate are generated claims?\n- Which claim types fail most often?\n- What completeness is lost under shorter workflows?\n- What is the quality-versus-cost trade-off?\n- Are outputs traceable to evidence?
+- How accurate are generated claims?
+- Which claim types fail most often?
+- What completeness is lost under shorter workflows?
+- What is the quality-versus-cost trade-off?
+- Are outputs traceable to evidence?
 
 ## Deliverables
 
-- Gold-standard evaluation set\n- Claim-level precision/recall/F1\n- Completeness and citation-coverage checks\n- Latency/cost tracking\n- Failure taxonomy\n- Evaluation report
+- Gold-standard evaluation set
+- Claim-level precision/recall/F1
+- Completeness and citation-coverage checks
+- Latency/cost tracking
+- Failure taxonomy
+- Evaluation report
 
 ## Suggested Repository Structure
 
@@ -43,3 +52,18 @@ Python, pandas, JSON, structured evaluation harness, pytest
 ## Portfolio Standard
 
 Use synthetic or public data with documented provenance. Clearly distinguish measured results from assumptions and illustrative scenarios.
+
+## Sample Outputs
+
+Run `python src/generate_outputs.py` to reproduce the claim-level evaluation scorecard. The fixture uses synthetic labels and does not measure a deployed AI system.
+
+### Executive summary
+
+See [`outputs/executive_summary.md`](outputs/executive_summary.md) for the quality, latency, cost, and limitation notes.
+
+![Quality scorecard](outputs/quality_scorecard.png)
+
+![Quality latency trade-off](outputs/quality_latency_tradeoff.png)
+
+- [`outputs/workflow_scorecard.csv`](outputs/workflow_scorecard.csv) — workflow-level metrics
+- [`outputs/failure_taxonomy.csv`](outputs/failure_taxonomy.csv) — illustrative failure counts

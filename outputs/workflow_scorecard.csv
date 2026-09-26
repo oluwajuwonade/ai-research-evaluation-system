@@ -1,0 +1,4 @@
+workflow,precision,recall,f1,citation_coverage,avg_latency_seconds,avg_cost_usd,claims_evaluated
+standard,1.0,0.6666666666666666,0.8,1.0,40.25,0.16999999999999998,4
+fast,1.0,0.6666666666666666,0.8,0.75,17.5,0.065,4
+reviewed,1.0,1.0,1.0,1.0,53.25,0.24,4

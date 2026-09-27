@@ -1,69 +1,79 @@
-# AI Research Evaluation System
+# AI Research & Evaluation Framework
 
-> Evaluation harness for AI-assisted research workflows using accuracy, completeness, consistency, traceability, latency, and cost metrics.
+> **Evaluation problem:** How can AI-assisted research be measured for accuracy, completeness, traceability, consistency, latency, and cost?
 
-## Business Problem
+An evaluation harness for structured AI-research workflows that converts qualitative review into repeatable metrics and failure analysis.
 
-A strong-looking AI answer is not sufficient evidence that a research workflow is reliable. The workflow should be evaluated against explicit expectations and documented failure modes.
+## Core evaluation workflow
 
-## Analytical Questions
+`AI output → Claim extraction → Evidence check → Accuracy → Completeness → Traceability → Cost/latency → Failure taxonomy`
 
-- How accurate are generated claims?
-- Which claim types fail most often?
-- What completeness is lost under shorter workflows?
-- What is the quality-versus-cost trade-off?
-- Are outputs traceable to evidence?
+## Analytical questions
+
+1. How accurate are generated claims?
+2. Which claim types fail most often?
+3. What completeness is lost when workflows are shortened?
+4. What is the quality-versus-cost trade-off?
+5. Are outputs traceable to evidence?
+
+## Evaluation metrics
+
+- Claim-level precision
+- Recall
+- F1
+- Completeness
+- Citation coverage
+- Consistency
+- Latency
+- Cost
+- Failure categories
 
 ## Deliverables
 
 - Gold-standard evaluation set
-- Claim-level precision/recall/F1
-- Completeness and citation-coverage checks
+- Claim-level scorecard
+- Completeness and citation checks
 - Latency/cost tracking
 - Failure taxonomy
 - Evaluation report
 
-## Suggested Repository Structure
+## Sample outputs
 
-```text
-ai-research-evaluation-system/
-├── data/
-├── notebooks/
-├── src/
-├── tests/
-├── outputs/
-├── README.md
-└── requirements.txt
+Run:
+
+```bash
+python src/generate_outputs.py
 ```
 
-## Stack
+The repository generates an illustrative quality scorecard and a quality-versus-latency view.
 
-Python, pandas, JSON, structured evaluation harness, pytest
+## Data disclosure
 
-## Method
+The fixture uses synthetic labels and **does not measure the performance of a deployed AI system**.
 
-1. Define the decision context and metric definitions.
-2. Profile and validate the data.
-3. Build reproducible transformations and calculations.
-4. Quantify the main drivers, scenarios, or failure modes.
-5. Validate outputs and document limitations.
-6. Produce an executive-ready decision narrative.
+## Quality principles
 
-## Portfolio Standard
+The framework treats an AI response as an analytical artifact that should be:
 
-Use synthetic or public data with documented provenance. Clearly distinguish measured results from assumptions and illustrative scenarios.
+- measurable
+- evidence-linked
+- reproducible
+- auditable
+- explicit about uncertainty
 
-## Sample Outputs
+## Portfolio role
 
-Run `python src/generate_outputs.py` to reproduce the claim-level evaluation scorecard. The fixture uses synthetic labels and does not measure a deployed AI system.
+**Tier 1 — Flagship AI Evaluation / Research Operations**
 
-### Executive summary
+This repository differentiates the portfolio from conventional analytics by demonstrating explicit measurement of AI workflow quality.
 
-See [`outputs/executive_summary.md`](outputs/executive_summary.md) for the quality, latency, cost, and limitation notes.
+## Related projects
 
-![Quality scorecard](outputs/quality_scorecard.png)
+- [AI-Native Data Analyst Operating System](https://github.com/oluwajuwonade/ai-powered-data-analyst-toolkit)
+- [Data Quality & Analytics Assurance](https://github.com/oluwajuwonade/data-quality-audit-toolkit)
+- [AI-Powered Retail Sales Diagnostic](https://github.com/oluwajuwonade/AI-Powered-Retail-Sales-Diagnostic)
 
-![Quality latency trade-off](outputs/quality_latency_tradeoff.png)
+## Author
 
-- [`outputs/workflow_scorecard.csv`](outputs/workflow_scorecard.csv) — workflow-level metrics
-- [`outputs/failure_taxonomy.csv`](outputs/failure_taxonomy.csv) — illustrative failure counts
+**Oluwajuwon Adediji**  
+Data & Quantitative Analyst | AI Evaluation | Research Operations

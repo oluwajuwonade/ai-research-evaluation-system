@@ -51,6 +51,13 @@ The repository generates an illustrative quality scorecard and a quality-versus-
 
 The fixture uses synthetic labels and **does not measure the performance of a deployed AI system**.
 
+## Important limitations
+
+- The evaluation fixture is synthetic and illustrative.
+- It does not measure the performance of a deployed AI system or guarantee behaviour in production.
+- Quality metrics depend on the definition and completeness of the evaluation set and evidence standard.
+- Production evaluation would require representative workloads, versioned references, monitoring, and human review for consequential outputs.
+
 ## Quality principles
 
 The framework treats an AI response as an analytical artifact that should be:
